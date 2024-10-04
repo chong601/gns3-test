@@ -22,5 +22,5 @@ set protocols bgp neighbor 172.31.202.1 address-family ipv4-unicast
 set protocols bgp neighbor 172.31.202.3 remote-as 64900
 set protocols bgp neighbor 172.31.202.3 passive
 set protocols bgp neighbor 172.31.202.3 address-family ipv4-unicast
-set protocols bgp neighbor 172.31.200.255 remote-as 64850
-set protocols bgp neighbor 172.31.200.255 address-family ipv4-unicast
+set protocols bgp neighbor 172.31.200.254 remote-as 64850
+set protocols bgp neighbor 172.31.200.254 address-family ipv4-unicast

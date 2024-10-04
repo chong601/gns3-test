@@ -4,7 +4,7 @@ set system name-server 8.8.4.4
 set service ssh
 
 set interfaces ethernet eth0 address 172.31.201.0/31
-set interfaces ethernet eth6 address 172.31.201.254/31
+set interfaces ethernet eth5 address 172.31.201.254/31
 
 set protocols bgp system-as 64852
 

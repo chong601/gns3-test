@@ -43,5 +43,7 @@ set protocols bgp neighbor 172.31.0.74 remote-as 64800
 set protocols bgp neighbor 172.31.0.74 update-source dum0
 set protocols bgp neighbor 172.31.0.74 address-family ipv4-unicast nexthop-self
 
+set protocols bgp address-family ipv4-unicast network 172.31.0.0/24
+set protocols static route 172.31.0.0/24 blackhole
 set protocols bgp address-family ipv4-unicast network 172.31.12.0/24
 set protocols static route 172.31.12.0/24 blackhole
