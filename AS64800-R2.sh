@@ -8,7 +8,7 @@ set interfaces ethernet eth0 address 172.31.0.1/31
 set interfaces ethernet eth1 address 172.31.0.6/31
 set interfaces ethernet eth2 address 172.31.0.16/31
 set interfaces ethernet eth5 address 172.31.0.163/27
-set interfaces ethernet eth6 address 172.31.200.1/31
+set interfaces ethernet eth6 address 172.31.200.3/31
 set interfaces ethernet eth7 address 172.31.0.99/27
 
 set protocols ospf parameters router-id 172.31.0.65
@@ -39,8 +39,8 @@ set protocols bgp parameters distance global internal 200
 set protocols bgp parameters distance global local 200
 set protocols bgp parameters deterministic-med
 
-set protocols bgp neighbor 172.31.200.0 remote-as 64850
-set protocols bgp neighbor 172.31.200.0 address-family ipv4-unicast
+set protocols bgp neighbor 172.31.200.2 remote-as 64850
+set protocols bgp neighbor 172.31.200.2 address-family ipv4-unicast
 
 set protocols bgp neighbor 172.31.0.72 remote-as 64800
 set protocols bgp neighbor 172.31.0.72 update-source dum0
