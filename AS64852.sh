@@ -24,8 +24,8 @@ set protocols bgp neighbor 172.31.201.4 remote-as 64851
 set protocols bgp neighbor 172.31.201.4 address-family ipv4-unicast
 set protocols bgp neighbor 172.31.202.5 remote-as 64853
 set protocols bgp neighbor 172.31.202.5 address-family ipv4-unicast
-set protocols bgp neighbor 172.31.201.255 remote-as 64854
-set protocols bgp neighbor 172.31.201.255 address-family ipv4-unicast
+set protocols bgp neighbor 172.31.202.255 remote-as 64854
+set protocols bgp neighbor 172.31.202.255 address-family ipv4-unicast
 
 set protocols bgp address-family ipv4-unicast network 172.31.202.0/24
 set protocols static route 172.31.202.0/24 blackhole
