@@ -1,0 +1,63 @@
+AS64854
+========
+set interfaces ethernet eth2 address 172.31.210.37/31
+set protocols bgp neighbor 172.31.210.36 remote-as 64500
+set protocols bgp neighbor 172.31.210.36 passive
+set protocols bgp neighbor 172.31.210.36 address-family ipv4-unicast
+
+# check convergence
+del interfaces ethernet eth4 address 172.31.203.7/31
+del protocols bgp neighbor 172.31.210.6
+
+AS64855
+========
+set interfaces ethernet eth3 address 172.31.210.35/31
+set protocols bgp neighbor 172.31.210.34 remote-as 64500
+set protocols bgp neighbor 172.31.210.34 passive
+set protocols bgp neighbor 172.31.210.34 address-family ipv4-unicast
+
+# check convergence
+del protocols bgp neighbor 172.31.210.4
+del interfaces ethernet eth3 address 172.31.210.5/31
+
+AS64500-R1
+===========
+del interfaces ethernet eth6 address
+del interfaces ethernet eth7 address
+
+del protocols bgp neighbor 172.31.210.6
+del protocols bgp neighbor 172.31.210.130
+
+set interfaces ethernet eth6 address 172.31.210.32/31
+set interfaces ethernet eth7 address 172.31.210.34/31
+
+set protocols bgp neighbor 172.31.210.35 remote-as 64855
+set protocols bgp neighbor 172.31.210.35 address-family ipv4-unicast
+
+set protocols bgp neighbor 172.31.210.2 remote-as 64500
+set protocols bgp neighbor 172.31.210.2 update-source dum0
+set protocols bgp neighbor 172.31.210.2 address-family ipv4-unicast nexthop-self
+set protocols bgp neighbor 172.31.210.3 remote-as 64500
+set protocols bgp neighbor 172.31.210.3 update-source dum0
+set protocols bgp neighbor 172.31.210.3 address-family ipv4-unicast nexthop-self
+
+AS64500-R2
+===========
+del interfaces ethernet eth6 address
+del interfaces ethernet eth7 address
+
+del protocols bgp neighbor 172.31.210.7
+del protocols bgp neighbor 172.31.210.129
+
+set interfaces ethernet eth6 address 172.31.210.33/31
+set interfaces ethernet eth7 address 172.31.210.36/31
+
+set protocols bgp neighbor 172.31.210.37 remote-as 64854
+set protocols bgp neighbor 172.31.210.37 address-family ipv4-unicast
+
+set protocols bgp neighbor 172.31.210.2 remote-as 64500
+set protocols bgp neighbor 172.31.210.2 update-source dum0
+set protocols bgp neighbor 172.31.210.2 address-family ipv4-unicast nexthop-self
+set protocols bgp neighbor 172.31.210.3 remote-as 64500
+set protocols bgp neighbor 172.31.210.3 update-source dum0
+set protocols bgp neighbor 172.31.210.3 address-family ipv4-unicast nexthop-self

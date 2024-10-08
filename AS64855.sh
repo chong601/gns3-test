@@ -7,7 +7,7 @@ set interfaces dummy dum0 address 172.31.205.0/32
 set interfaces ethernet eth0 address 172.31.201.7/31
 set interfaces ethernet eth1 address 172.31.204.9/31
 set interfaces ethernet eth2 address 172.31.203.9/31
-set interfaces ethernet eth3 address 172.31.210.5/31
+set interfaces ethernet eth3 address 172.31.210.35/31
 
 set protocols bgp system-as 64855
 
@@ -24,9 +24,9 @@ set protocols bgp neighbor 172.31.203.8 remote-as 64853
 set protocols bgp neighbor 172.31.203.8 address-family ipv4-unicast
 set protocols bgp neighbor 172.31.204.8 remote-as 64854
 set protocols bgp neighbor 172.31.204.8 address-family ipv4-unicast
-set protocols bgp neighbor 172.31.210.4 remote-as 64500
-set protocols bgp neighbor 172.31.210.4 passive
-set protocols bgp neighbor 172.31.210.4 address-family ipv4-unicast
+set protocols bgp neighbor 172.31.210.34 remote-as 64500
+set protocols bgp neighbor 172.31.210.34 passive
+set protocols bgp neighbor 172.31.210.34 address-family ipv4-unicast
 
 set protocols bgp address-family ipv4-unicast network 172.31.205.0/24
 set protocols static route 172.31.205.0/24 blackhole
