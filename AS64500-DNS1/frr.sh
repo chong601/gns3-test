@@ -5,8 +5,7 @@ router ospf 10
 ospf router-id 172.31.210.10
 passive-interface default
 
-interface lo:AS64500-DNS1
-ip address 172.31.210.10/32
+interface dum0
 ip ospf 10 area 0
 
 interface ens3
